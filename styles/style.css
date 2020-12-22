@@ -321,10 +321,9 @@
   /* border: 1px solid red; */
   color: white;
   text-decoration: none;
-}
-
-.footer_column-link_medium {
-  margin: 10px 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .footer_social-icon {
