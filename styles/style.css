@@ -18,9 +18,12 @@
   align-items: center;
 }
 
-.logo__place_header {
-  background-image: url(../images/logo_place_header.svg);
+.logo {
   width: 183px;
+}
+
+.logo_place_header {
+  background-image: url(../images/logo_place_header.svg);
   height: 32px;
   position: absolute;
   top: 30px;
@@ -28,15 +31,10 @@
   z-index: 2;
 }
 
-.title {
-  justify-content: center;
-  align-content: center;
-  margin-left: 64px;
+.header__title {
+  margin: 0 0 0 64px;
   width: 730px;
   z-index: 3;
-}
-
-.header__title {
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
@@ -47,10 +45,16 @@
   left: 64px;
   bottom: 30px;
   width: 388px;
+  margin: 0 auto;
   line-height: 25px;
   font-size: 18px;
   z-index: 4;
 } 
+
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
 
 .header__main-illustration {
   position: absolute;
@@ -102,11 +106,11 @@
 }
 
 .two-columns__paragraph {
-  margin: 0 auto;
+  margin: 0 0 30px 0;
 }
 
-.two-columns__paragraph_second {
-  margin: 30px 0;
+.two-columns__paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .two-columns__span-accent {
@@ -117,7 +121,7 @@
   padding-top: 100px;
 }
 
-.section__title {
+.digits__title {
   width: 60%;
   margin: 0 auto 20px auto;
   line-height: 1.15;
@@ -126,7 +130,7 @@
   text-align: center;
 }
 
-.section__subtitle {
+.digits__subtitle {
   width: 60%;
   margin: 0 auto;
   line-height: 34px;
@@ -136,13 +140,14 @@
 }
 
 .table {
+  /* border: 1px solid red; */
   display: flex;
   margin: 0 auto 100px auto;
   justify-content: space-evenly;
   width: 1100px;
   list-style: none;
   flex-wrap: wrap;
-  padding-inline-start: 0;
+  padding-left: 0;
 }
 
 .table__cell {
@@ -150,25 +155,23 @@
   margin-top: 60px;
 }
 
-.table__cell_heading {
+.table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
-  margin: 0 0 20px 0;
-}
-
-.table__cell_heading_text {
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-  margin-bottom: 20px;
-}
-
-.table__cell_heading_text_last {
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
   margin: 0;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 20px 0 0 0;
+}
+
+.table__text:last-child {
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .feynman {
@@ -213,6 +216,8 @@
   position: absolute;
   top: 50%;
   right: 48px;
+  color: #2f80ed;
+  text-decoration: none;
 }
 
 .kaufman {
@@ -221,18 +226,42 @@
   padding-top: 90px;
   position: relative;
   overflow: hidden;
-  z-index: -1;
+}
+
+.kaufman__title {
+  color: white;
+  width: 60%;
+  margin: 0 auto 20px auto;
+  position: relative;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+}
+
+.kaufman__subtitle {
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  z-index: 3;
 }
 
 .kaufman__triangle {
   /* border: 1px solid red; */
   background-image: url(../images/kaufman-triangle.svg);
+  background-size: cover;
   width: 877px;
   height: 877px;
   position: absolute;
   top: 0;
   right: -210px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .section__title_theme_dark {
@@ -247,7 +276,7 @@
   /* border: 1px solid red; */
   margin: 0 auto 90px auto;
   position: relative;
-  z-index: 1;
+  z-index: 4;
 }
 
 .table__cell_theme_dark {
@@ -286,10 +315,9 @@
   justify-content: space-between;
 }
 
-.logo__place_footer {
+.logo_place_footer {
   /* border: 1px solid red; */
   background-image: url(../images/logo_place_footer.svg);
-  width: 183px;
   height: 35px;
 }
 
@@ -298,7 +326,6 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  margin: 18 auto;
 }
 
 .footer__column-heading {
@@ -309,14 +336,14 @@
   margin: 0 auto;
 }
 
-.footer_column-links {
+.footer__column-links {
   /* border: 1px solid red; */
   margin: 20px auto 16px auto;
   list-style: none;
   padding-left: 0;
 }
 
-.footer_column-link {
+.footer__column-link {
   /* border: 1px solid red; */
   color: white;
   text-decoration: none;
@@ -325,7 +352,7 @@
   font-weight: normal;
 }
 
-.footer_social-icon {
+.footer__social-icon {
   /* border: 1px solid red; */
   margin-right: 10px;
   height: 16px;
