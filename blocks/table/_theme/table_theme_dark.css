@@ -1,0 +1,6 @@
+.table_theme_dark {
+    /* border: 1px solid red; */
+    margin: 0 auto 90px auto;
+    position: relative;
+    z-index: 4;
+  }
